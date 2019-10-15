@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: spboot2
+  mandatory-file-encoding: utf-8
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.String.Deserializer
+
+server:
+  port: 9090
+
+myConfig:
+  myObject:
+    myName: jason
+    myAge: 15
+
+logging:
+  level:
+    root: INFO
+  path: logs/mylog

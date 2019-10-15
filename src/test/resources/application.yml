@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: spboot2
+  mandatory-file-encoding: utf-8
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+server:
+  port: 9090
+
+myConfig:
+  myObject:
+    myName: jason
+    myAge: 15
+
+logging:
+  level:
+    root: warn
+  path: logs/mylog
